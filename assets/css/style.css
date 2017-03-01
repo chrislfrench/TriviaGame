@@ -1,0 +1,21 @@
+#wrapper {
+
+	background-image: url("../images/background.jpg");
+	background-size: 1000px 667px;
+    /*background-position: center;*/
+
+}
+
+#title{
+	padding: 15px;
+	color: black;
+	background-color: #black;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#frame{
+
+	background-image: url("../images/frame.png");
+	background-size: 500px 800px;
+
+}

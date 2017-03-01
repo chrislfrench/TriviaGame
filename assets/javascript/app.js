@@ -21,19 +21,21 @@
     correctAnswer: 4
   }];
   
+  var images = ["./assets/images/friendsGif1", "./assets/images/friendsGif2"];
+
   var questionCounter = 0; //Tracks question number
   var selections = []; //Array containing user choices
   var quiz = $("#quiz"); //Quiz div object
   var count = 0;
 
-  var number = 100;
+  var number = 10;
+
+  // Holds the setInterval for the gifs
+  var showImage;
   
+  // holds the setInterval for the timer
   var intervalId;
 
-  // setTimeout(fiveSeconds, 1000 * 5);
-  // setTimeout(tenSeconds, 1000 * 10);
-  // setTimeout(timeUp, 1000 * 15);
-  
   // Display initial question
   displayNext();
   run();
@@ -41,7 +43,12 @@
   // Click handler for the 'next' button
   $('#next').on('click', function (e) {
     e.preventDefault();
-    number = 100;
+    // Resets the counter to 100.
+    number = 10;
+
+    
+    // Hides opening paragraph
+    $('#opener').hide();
     
     // Suspend click listener during fade animation
     if(quiz.is(':animated')) {        
@@ -113,7 +120,7 @@
   
  	// starts timer for the question. 
   function run() {
-   intervalId = setInterval(decrement, 100);
+   intervalId = setInterval(decrement, 1000);
   }
 
    function decrement() {
@@ -144,6 +151,12 @@
 
 
   // Displays next requested element
+  function startGame() {
+
+  	$('<div>')
+
+  }
+
   function displayNext() {
   	// run();
     quiz.fadeOut(function() {
@@ -177,6 +190,16 @@
   
   // Computes score and returns a paragraph element to be displayed
   function displayScore() {
+
+  	// stops counter
+  	clearInterval(intervalId);
+
+  	// Hides counter
+    $('#show-number').hide();
+
+    $("#image-holder").html("<img src='http://66.media.tumblr.com/96c932090cec40577fc5c2a5e3eb62cf/tumblr_o9ggunKuqD1vxn4rmo1_500.gif'/>")
+
+
     var score = $('<p>',{id: 'question'});
     
     var numCorrect = 0;
