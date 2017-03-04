@@ -1,8 +1,15 @@
+#body {
+
+	height: 100%;
+
+}
+
 #wrapper {
 
 	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
 	/*background-size: 1000px 667px;*/
-	background-size: 100%;
+	background-size: cover;
     /*background-position: center;*/
 
 }
@@ -38,7 +45,7 @@
 
 #show-number{
 
-	color: black;
+	color: white;
 	font-family: 'McLaren', cursive;
 	font-size: 60px;
 	/*background-color: rgba(255,255,255,0.5);*/
@@ -50,7 +57,20 @@ number{
 	color: white;
 }
 
+button{
+
+	width: 118px;
+	margin: 20px 20px 50px 20px;
+}
+
 #opener{
 
-	color: white;
+	color: grey;
+	font-size: 75px;
+	font-family: 'McLaren', cursive;
+}
+
+#footer{
+
+	margin: 50px 50px 200px 50px;
 }

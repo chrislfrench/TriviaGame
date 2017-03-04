@@ -2,7 +2,7 @@
 (function() {
   var questions = [{
     question: "What is Monica'a biggest pet peeve?",
-    choices: ["Animals dressed as humans", "Using the guest soap", "Animals in the apartment", "Not doing the dishes", "Moving furniture without her permission"],
+    choices: ["Animals dressed as humans", "Using the guest soap", "Poultry in the apartment", "Not doing the dishes", "Moving furniture without her permission"],
     correctAnswer: 0
   }, {
     question: "According to Chandler, what phenomenon scares the bejeezus out of him?",
