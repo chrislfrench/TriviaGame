@@ -1,21 +1,56 @@
 #wrapper {
 
 	background-image: url("../images/background.jpg");
-	background-size: 1000px 667px;
+	/*background-size: 1000px 667px;*/
+	background-size: 100%;
     /*background-position: center;*/
 
 }
 
 #title{
+	
 	padding: 15px;
 	color: black;
 	background-color: #black;
     background-color: rgba(255,255,255,0.5);
+    display: inline-block;
+    font-family: 'McLaren', cursive;
 }
 
 #frame{
 
-	background-image: url("../images/frame.png");
-	background-size: 500px 800px;
+	/*background-image: url("../images/frame.png");*/
+	background-size: 600px;
+	background-position: center;
+	background-repeat: no-repeat;
 
+
+}
+
+#quiz{
+
+	background-color: rgba(255,255,255,0.5);
+	font-family: 'McLaren', cursive;
+	text-align: left;
+	/*font-size: 25px;*/
+
+}
+
+#show-number{
+
+	color: black;
+	font-family: 'McLaren', cursive;
+	font-size: 60px;
+	/*background-color: rgba(255,255,255,0.5);*/
+
+}
+
+number{
+
+	color: white;
+}
+
+#opener{
+
+	color: white;
 }

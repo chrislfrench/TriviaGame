@@ -1,7 +1,8 @@
+
 (function() {
   var questions = [{
     question: "What is Monica'a biggest pet peeve?",
-    choices: ["  Animals dressed as humans", "  Using the guest soap", "  Animals in the apartment", "  Not doing the dishes", "  Moving furniture without her permission"],
+    choices: ["Animals dressed as humans", "Using the guest soap", "Animals in the apartment", "Not doing the dishes", "Moving furniture without her permission"],
     correctAnswer: 0
   }, {
     question: "According to Chandler, what phenomenon scares the bejeezus out of him?",
@@ -28,7 +29,7 @@
   var quiz = $("#quiz"); //Quiz div object
   var count = 0;
 
-  var number = 10;
+  var number = 11;
 
   // Holds the setInterval for the gifs
   var showImage;
@@ -37,9 +38,13 @@
   var intervalId;
 
   // Display initial question
+  
+ $('#start').on('click', function () {
+  $('#opener').hide();
+  $('#start').hide();
   displayNext();
   run();
-  
+ }) 
   // Click handler for the 'next' button
   $('#next').on('click', function (e) {
     e.preventDefault();
@@ -140,7 +145,7 @@
    function reset () {
 
    		questionCounter++;
-   		number = 100;
+   		number = 11;
    		displayNext();
 
    }
@@ -183,7 +188,6 @@
         quiz.append(scoreElem).fadeIn();
         $('#next').hide();
         $('#prev').hide();
-        $('#start').show();
       }
     });
   }
@@ -197,6 +201,7 @@
   	// Hides counter
     $('#show-number').hide();
 
+    // plays silly gif at end of game
     $("#image-holder").html("<img src='http://66.media.tumblr.com/96c932090cec40577fc5c2a5e3eb62cf/tumblr_o9ggunKuqD1vxn4rmo1_500.gif'/>")
 
 
